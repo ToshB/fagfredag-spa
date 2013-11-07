@@ -52,9 +52,9 @@
 
           <h3>Hva med liste over steder?</h3>
           <p>Vi har laget et enkelt api for å søke etter steder dere kan spørre etter vær for. </br><code>http://yr-proxy.tosh.no/search?q=query</code></p>
-          <p>Søket utfører et case-insensitivt fulltekst-søk på stedsnavn, sortert etter prioritet hos yr (lavere prioritet=mer viktig). Om ønskelig kan pri-parameter legges på søket for å filtrere ut småsteder. Eksempelqueries:<p>
-          <a href="http://yr-proxy.tosh.no/search?q=sund">http://yr-proxy.tosh.no/search?q=sund</a> (steder med sund i navnet)</br>
-          <a href="http://yr-proxy.tosh.no/search?q=sund&amp;pri=15">http://yr-proxy.tosh.no/search?q=sund&amp;pri=15</a> (byer med sund i navnet)
+          <p>Søket utfører et case-insensitivt søk på alle ord i stedsnavn (altså 'LIKE ord%'), sortert etter prioritet hos yr (lavere prioritet=mer viktig). Om ønskelig kan pri-parameter legges på søket for å filtrere ut småsteder. Eksempelqueries:<p>
+          <a href="http://yr-proxy.tosh.no/search?q=vær">http://yr-proxy.tosh.no/search?q=vær</a> (steder med ord som starter på vær, f.eks "Trondheim Lufthavn Værnes")</br>
+          <a href="http://yr-proxy.tosh.no/search?q=berg&amp;pri=15">http://yr-proxy.tosh.no/search?q=berg&amp;pri=15</a> (byer med ord lik berg*, f.eks. "Bergen" eller "Ytre Berge")
           <p>Vi skal klare å ta unna ganske bra trykk på disse tjenestene. Byene ligger hos oss og vi cacher vær-requests mot yr i 10 minutter, så ikke vær redd for å forsøke å implementere autocomplete på søk, eller periodisk refresh av vær-info. Men dere trenger ikke DDOS'e proxyen bare for å teste ()
 
           <h2>Jeg er ferdig, hva nå?</h2>
