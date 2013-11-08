@@ -43,7 +43,7 @@
             </ol>
 
           <h2>Hvor henter jeg data fra?</h2>
-          <p>Yr har et <a href="http://om.yr.no/verdata/xml/">API</a> for å hente værdata, men det har to svakheter. Det gir bare ut XML og ikke JSON, noe som gjør det litt mer knot å jobbe med i JavaScript, i tillegg til at det ikke gir ut riktige HTML-headere (Access-Control-Allow-Origin) som gjør at JavaScript tillater at en side som ligger på en annen server laster data derfra.</p>
+          <p>Yr har et <a href="http://om.yr.no/verdata/xml/">API</a> for å hente værdata, men det har to svakheter. Det gir bare ut XML og ikke JSON, noe som gjør det litt mer knot å jobbe med i JavaScript, i tillegg til at det ikke gir ut riktige HTTP-headere (Access-Control-Allow-Origin) som gjør at JavaScript tillater at en side som ligger på en annen server laster data derfra.</p>
           <p>For å komme rundt disse begrensningene slik at det blir lettere å løse denne oppgaven har vi laget en proxy mot Yr-API'et, som ligger på <a href="http://yr-proxy.tosh.no">http://yr-proxy.tosh.no</a>. Den lar deg hente data som om du henter fra Yr, konvertert til JSON og med riktige headere lagt til.</p>
           <p><a href="http://om.yr.no/verdata/xml/spesifikasjon/">Dokumentasjonen til Yr-API'et</a> gjelder fortsatt mer eller mindre, men om du ønsker å få varselet for Gvarv ikke bruk URL'en <a href="http://www.yr.no/sted/Norge/Telemark/Sauherad/Gvarv/varsel.xml">http://www.yr.no/sted/Norge/Telemark/Sauherad/Gvarv/varsel.xml</a></br> men bruk </br><a href="http://yr-proxy.tosh.no/sted/Norge/Telemark/Sauherad/Gvarv/varsel.xml">http://yr-proxy.tosh.no/sted/Norge/Telemark/Sauherad/Gvarv/varsel.xml</a> eller </br><a href="http://yr-proxy.tosh.no/sted/Norge/Telemark/Sauherad/Gvarv/varsel.json">http://yr-proxy.tosh.no/sted/Norge/Telemark/Sauherad/Gvarv/varsel.json</a> </br>(begge returnerer JSON).</p>
 
@@ -78,7 +78,7 @@
         </section>
 
         <aside id="sidebar">
-          <a href="https://github.com/olavhaugen/fagfredag-spa" class="button">
+          <a href="https://github.com/olavhaugen/fagfredag-spa-angular" class="button">
             <small>Oppgave</small>
             Angular
           </a>
